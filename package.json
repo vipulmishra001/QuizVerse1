@@ -1,0 +1,24 @@
+{
+  "name": "quizverse",
+  "version": "0.1.0",
+  "description": "A quiz application with Node.js backend and vanilla JavaScript frontend",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "setup-db": "node setup-database.js",
+    "test-db": "node test-db-connection.js"
+  },
+  "keywords": [
+    "quiz",
+    "nodejs",
+    "express",
+    "mysql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.22.1",
+    "mysql2": "^3.16.0"
+  }
+}

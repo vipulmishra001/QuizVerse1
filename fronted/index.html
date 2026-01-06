@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QuizVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="top-bar">
+    <div class="container nav-wrapper">
+      <div class="logo">
+        <i class="fa-solid fa-bolt"></i>
+        <span>QuizVerse</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#quizzes" class="nav-link">Quizzes</a>
+        <a href="#games" class="nav-link">Games</a>
+        <a href="#streaks" class="nav-link">Streaks</a>
+        <a href="#leaderboard" class="nav-link">Leaderboard</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero-section">
+      <div class="container hero-content">
+        <p class="hero-tagline">
+          <i class="fa-solid fa-gamepad"></i>
+          Welcome to QuizVerse
+        </p>
+        <h1>A universe of quizzes and games</h1>
+        <p class="hero-subtitle">
+          Practice coding, master math, and push your IQ – all in one neon playground.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn primary-btn" data-quiz="coding">
+            <i class="fa-solid fa-code"></i>
+            Start Coding Quiz
+          </button>
+          <button class="btn purple-btn" data-quiz="math">
+            <i class="fa-solid fa-square-root-variable"></i>
+            Play Math Quiz
+          </button>
+          <button class="btn outline-btn" data-quiz="iq">
+            <i class="fa-solid fa-brain"></i>
+            Test Your IQ
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="streaks" class="features-section">
+      <div class="container features-grid">
+        <article class="feature-card">
+          <div class="feature-icon flame">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <h3>Daily Streaks</h3>
+          <p>Play every day and keep your streak alive for bonus XP and rewards.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon trophy">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h3>XP &amp; Badges</h3>
+          <p>Earn XP, unlock rare badges, and level up your QuizVerse profile.</p>
+        </article>
+
+        <article id="leaderboard" class="feature-card">
+          <div class="feature-icon globe">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3>Leaderboard</h3>
+          <p>Compete with friends and players across the world in real-time.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUICK QUIZ -->
+    <section id="quizzes" class="quiz-section">
+      <div class="container quiz-card">
+        <h2>Quick Quiz</h2>
+        <p class="quiz-subtitle">
+          Answer this simple question to earn XP:
+        </p>
+
+        <div id="question-box">
+          <p class="quiz-question">
+            In JavaScript, which keyword is used to declare a variable that can change?
+          </p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">const</button>
+            <button class="quiz-option" data-correct="true">let</button>
+            <button class="quiz-option" data-correct="false">static</button>
+            <button class="quiz-option" data-correct="false">define</button>
+          </div>
+        </div>
+
+        <div class="quiz-footer">
+          <div class="xp-bar-wrapper">
+            <span class="xp-label">XP</span>
+            <div class="xp-bar">
+              <div class="xp-fill"></div>
+            </div>
+            <span class="xp-value"><span id="xp">0</span> / 100</span>
+          </div>
+          <p id="quiz-message" class="quiz-message">
+            Pick an answer to start earning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAMES PLACEHOLDER -->
+    <section id="games" class="placeholder-section">
+      <div class="container">
+        <h2>Mini Games</h2>
+        <p>Coming soon.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-card">
+        <h2>Contact</h2>
+        <p>Have feedback or ideas for new quizzes?</p>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-grid">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Email" required />
+          </div>
+          <textarea rows="3" placeholder="Your message"></textarea>
+          <button type="submit" class="btn primary-btn glow-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2025 QuizVerse. All rights reserved.</span>
+      <span class="footer-right">
+        <i class="fa-brands fa-discord"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+      </span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
