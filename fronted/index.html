@@ -68,30 +68,96 @@
 
     <!-- FEATURES -->
     <section id="streaks" class="features-section">
-      <div class="container features-grid">
-        <article class="feature-card">
-          <div class="feature-icon flame">
-            <i class="fa-solid fa-fire"></i>
+      <div class="container">
+        <h2 class="section-title">🔥 Daily Streaks</h2>
+        <div class="streaks-display">
+          <div class="streak-card">
+            <div class="streak-icon">🔥</div>
+            <div class="streak-info">
+              <h3>Your Current Streak</h3>
+              <div class="streak-count">7 <span>days</span></div>
+              <p>Keep it going! Play daily to maintain your streak.</p>
+            </div>
           </div>
-          <h3>Daily Streaks</h3>
-          <p>Play every day and keep your streak alive for bonus XP and rewards.</p>
-        </article>
+          <div class="streak-calendar">
+            <div class="calendar-day active">Mon</div>
+            <div class="calendar-day active">Tue</div>
+            <div class="calendar-day active">Wed</div>
+            <div class="calendar-day active">Thu</div>
+            <div class="calendar-day active">Fri</div>
+            <div class="calendar-day active">Sat</div>
+            <div class="calendar-day active today">Sun</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <article class="feature-card">
-          <div class="feature-icon trophy">
-            <i class="fa-solid fa-trophy"></i>
+    <!-- XP & BADGES -->
+    <section class="badges-section">
+      <div class="container">
+        <h2 class="section-title">🏆 XP & Badges</h2>
+        <div class="badges-container">
+          <div class="badge-card earned">
+            <div class="badge-icon">💎</div>
+            <h4>Diamond Coder</h4>
+            <p>Earned 1000 XP</p>
           </div>
-          <h3>XP &amp; Badges</h3>
-          <p>Earn XP, unlock rare badges, and level up your QuizVerse profile.</p>
-        </article>
+          <div class="badge-card earned">
+            <div class="badge-icon">⚡</div>
+            <h4>Speed Demon</h4>
+            <p>Complete 10 quizzes</p>
+          </div>
+          <div class="badge-card earned">
+            <div class="badge-icon">🔥</div>
+            <h4>Streak Master</h4>
+            <p>7 day streak</p>
+          </div>
+          <div class="badge-card locked">
+            <div class="badge-icon">👑</div>
+            <h4>Quiz King</h4>
+            <p>Locked - 50 quizzes</p>
+          </div>
+          <div class="badge-card locked">
+            <div class="badge-icon">🌟</div>
+            <h4>Perfect Score</h4>
+            <p>Locked - 100% accuracy</p>
+          </div>
+          <div class="badge-card locked">
+            <div class="badge-icon">🚀</div>
+            <h4>Rocket</h4>
+            <p>Locked - 5000 XP</p>
+          </div>
+        </div>
+        <div class="xp-display">
+          <div class="xp-total">
+            <span class="xp-number">2,450</span>
+            <span class="xp-label">Total XP</span>
+          </div>
+          <div class="xp-level">
+            <span class="level-number">Level 5</span>
+            <div class="level-progress">
+              <div class="level-progress-fill level-progress-65"></div>
+            </div>
+            <span class="level-next">Next: Level 6 (3000 XP)</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <article id="leaderboard" class="feature-card">
-          <div class="feature-icon globe">
-            <i class="fa-solid fa-globe"></i>
+    <!-- LEADERBOARD -->
+    <section id="leaderboard" class="leaderboard-section">
+      <div class="container">
+        <h2 class="section-title">🏅 Leaderboard</h2>
+        <div class="leaderboard-container">
+          <div class="leaderboard-tabs">
+            <button class="tab-btn active" data-tab="global">Global</button>
+            <button class="tab-btn" data-tab="weekly">This Week</button>
+            <button class="tab-btn" data-tab="monthly">This Month</button>
           </div>
-          <h3>Leaderboard</h3>
-          <p>Compete with friends and players across the world in real-time.</p>
-        </article>
+          <div class="leaderboard-list" id="leaderboardList">
+            <!-- Leaderboard entries will be inserted here -->
+          </div>
+        </div>
       </div>
     </section>
 
@@ -130,13 +196,33 @@
       </div>
     </section>
 
-    <!-- GAMES PLACEHOLDER -->
-    <section id="games" class="placeholder-section">
+    <!-- GAMES SECTION -->
+    <section id="games" class="games-section">
       <div class="container">
-        <h2>Mini Games</h2>
-        <p>Coming soon.</p>
+        <h2 class="section-title">🎮 Mini Games</h2>
+        <p class="section-subtitle">Choose a game and start playing!</p>
+        
+        <div class="games-grid" id="gamesGrid">
+          <!-- Game cards will be inserted here by JavaScript -->
+        </div>
       </div>
     </section>
+    
+    <!-- GAME MODAL -->
+    <div id="gameModal" class="game-modal">
+      <div class="game-modal-content">
+        <span class="game-modal-close">&times;</span>
+        <div id="gameContainer"></div>
+      </div>
+    </div>
+
+    <!-- QUIZ MODAL -->
+    <div id="quizModal" class="game-modal">
+      <div class="game-modal-content quiz-modal-content">
+        <span class="game-modal-close">&times;</span>
+        <div id="quizContainer"></div>
+      </div>
+    </div>
 
     <!-- CONTACT -->
     <section id="contact" class="contact-section">
